@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Javascript Events</h1>
+
+    <button>Don't Press Me!</button> 
+    <a href="http://google.com">Link to Google</a>
+    <br><br>
+    <form method="get">
+        <label>Your Name: <input type="text" name="name"></label>
+        <input type="submit" value="send">
+
+    </form>
+
+    <h1 class="second">Roll your mouse over the Boxes</h1>
+    <div></div>
+
+    <script>
+
+        var btn = document.querySelector('button');
+
+        function ouch() {
+            alert("I told you not to touch me!");
+        }
+
+        /*   btn.onclick = function(){
+              alert("I told you not to touch me!");
+          } */
+
+        // btn.addEventListener('click', ouch);
+
+        /*  btn.addEventListener('click', function(){
+             alert("I told you not to press me!");
+          }); */
+
+        btn.addEventListener('click', function (event) {
+            event.target.style.backgroundColor = 'red';
+            alert("I told you not to press me!");
+        });
+
+        var link = document.querySelector('a');
+        link.addEventListener('click', function(event){
+            event.preventDefault();
+            alert("Sorry, no google for you");
+        });
+
+        var myForm = document.querySelector('form');
+
+        myForm.addEventListener('submit', function(event){
+            event.preventDefault();
+
+            var formData = document.querySelector('input').value;
+            alert(formData);
+        })
+
+        var heading = document.querySelector('.second');
+        var box = document.querySelector('div');
+
+        box.addEventListener('mouseover', function(){
+            heading.innerHTML = "The mouse is over the box!";
+        });
+
+        box.addEventListener('mouseout', function(){
+            heading.innerHTML = "The mouse has left the box!";
+        });
+
+        heading.addEventListener('mouseover', function(){
+            heading.innerHTML = "Roll your mouse over the boxes!";
+        });
+    </script>
+
+
+
+</body>
+
+</html>

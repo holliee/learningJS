@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Selections</title>
+</head>
+<body>
+    <h1>Testing Selections</h1>
+
+    <script>
+        var red = true;
+        var blue = false;
+
+        //variables that are undefined, null, NaN, or zero are false
+        //variables that are numbers (except 0) and words are true
+        var green;
+
+        var myNum = 5;
+        var otherNum = 6;
+        var notNum = "chicken";
+        var myValue = notNum - myNum;
+
+/*         if( myValue ){
+            //something happens...
+            console.log("The statement is true!");
+
+        } else{
+            console.log("The statement is false!");
+            console.log(myValue);
+        } */
+
+        var colors = ['red', 'blue', 'green', 'yellow'];
+        var selectedColor = colors[0];
+
+/*         if(selectedColor == 'red') {
+            console.log('The color is red');
+        } else if(selectedColor == 'blue') {
+            console.log('The color is blue');
+        } else if(selectedColor == 'green') {
+            console.log('The color is green');
+        } else{
+            console.log('The color is yellow');
+        } */
+
+/*         switch(selectedColor) {
+            case "red" : console.log('The color is red'); break;
+            case "blue" : console.log('The color is blue'); break;
+            case "green" : console.log('The color is green'); break;
+            case "yellow" : console.log('The color is yellow'); break;
+            default: console.log("There was an error!");
+        } */
+
+        var goodMood = true;
+        var gotSleep = true;
+
+/*         if( goodMood && gotSleep ){
+            console.log("Today is a good day");
+        } else {
+            console.log("I am grumpy");
+        } */
+
+        var gotBreakfast = true;
+        var gotLunch = true;
+        var gotDinner = false;
+
+        if( gotBreakfast || gotLunch || gotDinner ) {
+            console.log("I am not starving");
+        } else {
+            console.log("STARVING!");
+        }
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Loops</title>
+</head>
+<body>
+    <h1>Loops in JS</h1>
+
+    <script>
+
+    /*     for( var i = 0; i < 10; i += 2 ){
+            console.log(i);
+
+        }
+ */
+
+        var colors = ['red', 'blue', 'yellow', 'green', 'orange', 'purple'];
+/* 
+        for (var i = 0; i < 4; i++){
+            console.log(colors[i]);
+        } */
+
+/*         for (var i = 0; i < colors.length; i++){
+            console.log(colors[i]);
+        } */
+
+/*         var food = ['grapes', 'cheese', 'bread', 'olives'];
+        
+        for( var eachItem of food){
+            console.log(eachItem);
+        } */
+
+        var statement = "A string can be treated like an array";
+
+/*         for( var i = 0; i < statement.length; i++){
+            console.log( statement[i]);
+        } */
+
+/*         for( var eachLetter of statement){
+            console.log( eachLetter);
+
+        } */
+
+        var incrementor = 0;
+        var text = "";
+
+        while( incrementor < 10){
+            text += `The incrementor is ${incrementor}, and squared it is ${incrementor * incrementor} \n`;
+            incrementor++;
+        }
+
+        console.log(text);
+
+
+    </script>
+    
+</body>
+</html>

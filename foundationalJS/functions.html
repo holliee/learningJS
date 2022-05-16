@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <h1>Functions in JavaScript</h1>
+    <script>
+
+        function doStuff() {
+            var myString = "here is a message";
+            var upperString = myString.toUpperCase();
+            console.log(myString);
+            console.log(upperString);
+        }
+
+        //doStuff();
+
+        function upperMessage(message) {
+            var upper = message.toUpperCase();
+            console.log(upper);
+        }
+        //upperMessage("an important message!");
+
+        function addNums(num1, num2) {
+            var sum = num1 + num2;
+            console.log(sum);
+        }
+        //addNums(4, 3);
+
+        function returnSum(num1, num2) {
+            var sum = num1 + num2;
+            return sum;
+        }
+        //console.log( returnSum( 5, 3) );
+
+        //console.log( Math.random() );
+
+        var foods = ['cheese', 'chicken', 'grapes', 'hamburgers'];
+        /*         function randomInt( min, max ){
+                    var numOfValues = max - min + 1;
+                    var randomNum = Math.random();
+                    var randomVal = randomNum * numOfValues;
+                    var roundedRandomVal = Math.floor(randomVal);
+                    var finalNum = min + roundedRandomVal;
+        
+                    return finalNum;
+                } */
+        function randomInt(min, max) {
+            return Math.floor((max - min + 1) * Math.random()) + min;
+        }
+
+        //console.log(foods[randomInt(0, foods.length - 1)]);
+
+        /*        var greeting = function() {
+                   var name = prompt("Please tell me your name", "");;
+                   console.log(`Hello ${name}, how are you today?`);
+               }
+               greeting();
+        */
+
+        var greeting = "Hello, and good morning!";
+
+        function capitalizeFunction( anyString ){
+            anyString = anyString.toUpperCase();
+            return anyString;
+        }
+        
+        var capitalizeExpression = function( anyString ){
+            anyString = anyString.toUpperCase();
+            return anyString;
+        }
+
+        var capitalizeArrow = anyString => anyString.toUpperCase();
+
+        console.log(capitalizeFunction(greeting));
+        console.log(capitalizeExpression(greeting));
+        console.log(capitalizeArrow(greeting));
+
+
+    </script>
+</body>
+
+</html>
