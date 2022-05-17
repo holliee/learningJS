@@ -9,7 +9,16 @@
 <body>
     <h1>JavaScript Event Challenges: Challenge 22</h1>
     <p>Here is a paragraph of text</p>
-    <button>TUrn Green Dammit!</button>
+    <button>Turn Green Dammit!</button>
+
+    <script>
+        var btn = document.querySelector('button');
+        var par = document.querySelector('p');
+
+        btn.addEventListener('click', function(){
+            par.style.color = 'green';
+        });
+    </script>
     
 </body>
 </html>
