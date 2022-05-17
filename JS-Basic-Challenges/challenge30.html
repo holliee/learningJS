@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenges: Challenge 30</title>
+    <style>
+        .one {
+            background-color: beige;
+            transition: all 3s;
+        }
+
+        .two {
+            background-color: blueviolet;
+            transition: all 3s;
+        }
+
+        .three {
+            background-color: coral;
+            transition: all 3s;
+        }
+
+        .four {
+            background-color: cornflowerblue;
+            transition: all 3s;
+        }
+
+        .five {
+            background-color: darkgoldenrod;
+            transition: all 3s;
+        }
+    </style>
+</head>
+
+<body class="one">
+    <h1>JavaScript Event Challenges: Challenge 30</h1>
+    <p>Press the B key to turn the page beige</p>
+    <p>Press the V key to turn the page blueviolet</p>
+    <p>Press the C key to turn the page coral</p>
+    <p>Press the F key to turn the page cornflowerblue</p>
+    <p>Press the G key to turn the page darkgoldenrod</p>
+
+
+    <script>
+        var bodyTag = document.querySelector('body');
+
+        window.addEventListener("keydown", function (event) {
+
+            var keyPressed = event.key;
+
+            switch (true) {
+                case keyPressed.toLowerCase() == 'b':
+                    bodyTag.className = 'one';
+                    break;
+                case keyPressed.toLowerCase() == 'v':
+                    bodyTag.className = 'two';
+                    break;
+                case keyPressed.toLowerCase() == 'c':
+                    bodyTag.className = 'three';
+                    break;
+                case keyPressed.toLowerCase() == 'f':
+                    bodyTag.className = 'four';
+                    break;
+                case keyPressed.toLowerCase() == 'g':
+                    bodyTag.className = 'five';
+                    break;
+                default: alert("Nasty message. Press a correct key!");
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
