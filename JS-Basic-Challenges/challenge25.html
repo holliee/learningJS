@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenges: Challenge 25</title>
+</head>
+
+<body>
+    <h1>JavaScript Event Challenges: Challenge 25</h1>
+    <div>
+        <p>Here is the first paragraph of text</p>
+    </div>
+
+    <button>Add a paragraph</button>
+    <button>Remove a paragraph</button>
+
+
+    <script>
+        var divTag = document.querySelector('div');
+        var btnAdd = document.querySelectorAll('button')[0];
+        var btnDel = document.querySelectorAll('button')[1];
+
+        btnAdd.addEventListener('click', function(){
+
+            var newPara = document.createElement('p');
+            var paraText = document.createTextNode("A new Paragraph!");
+            newPara.appendChild(paraText);
+            divTag.appendChild(newPara);
+        });
+
+        btnDel.addEventListener('click', function(){
+            var allPara = document.querySelectorAll('p');
+            divTag.removeChild(divTag.children[allPara.length - 1 ]);
+        });
+    </script>
+</body>
+
+</html>
