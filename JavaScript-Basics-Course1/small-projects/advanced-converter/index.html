@@ -1,98 +1,44 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>Distance Converter</title>
 
 	<!--/ /-------- Normalize CSS --------/ /-->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-	
+
 	<!--/ /-------- Google Fonts --------/ /-->
 	<link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans&display=swap" rel="stylesheet">
-	
+
 	<!--/ /-------- My Styles --------/ /-->
 	<link href="styles.css" rel="stylesheet">
+
+	<script src="script.js" defer></script>
 
 </head>
 
 <body>
 
 	<h1>Miles to Kilometers Converter</h1>
-    
-    <div class="container top">
-    	<p>Type in a number of miles and click the button to convert the distance to kilometers.</p>
-        
-        <form method="post" action="somephpfile.php" id="convert">
-        
-        	<input type="text" name="distance" id="distance" placeholder="distance">
-            <input type="submit" name="convertdist" value="Convert Distance">
-        
-        </form>
-    </div>
-    <div class="container bottom" id="answer">
-    	<h2 class="invisible">Answer goes here</h2>
-    </div>
-    
-    <p id="directions">Press the "K" key to switch to kilometer converstion, press the "M" key to switch to mile conversion</p>
 
-	<script>
-		var convertType = 'miles';
-		var heading = document.querySelector('h1');
-		var intro = document.querySelector('p');
-		var answerDiv = document.getElementById('answer');
-		var form = document.getElementById('container');
+	<div class="container top">
+		<p>Type in a number of miles and click the button to convert the distance to kilometers.</p>
 
-		document.addEventListener('keydown', function(event){
-			//handle keypress of K or M key
-			var key = event.code;
+		<form method="post" action="somephpfile.php" id="convert">
 
-			if( key === 'KeyK'){
-				//change value of convertType variable
-				convertType = 'kilometers';
+			<input type="text" name="distance" id="distance" placeholder="distance">
+			<input type="submit" name="convertdist" value="Convert Distance">
 
-				//change heading
-				heading.innerHTML = 'Kilometers to Miles Converter';
+		</form>
+	</div>
+	<div class="container bottom" id="answer">
+		<h2 class="invisible">Answer goes here</h2>
+	</div>
 
-				//change intro paragraph
-				intro.innerHTML = 'Type in a number of kilometers and click the button to convert the distance to miles.';
+	<p id="directions">Press the "K" key to switch to kilometer converstion, press the "M" key to switch to mile
+		conversion</p>
 
-			}
-			else if ( key === 'KeyM'){
-				convertType = 'miles';
-				heading.innerHTML = 'Miles to Kilometers Converter';
-				intro.innerHTML = 'Type in a number of miles and click the button to convert the distance to kilometers.';
-
-
-			}
-		});
-
-		document.addEventListener('submit', function(event){
-			//handle submission of form and distance conversion
-			event.preventDefault();
-
-			var distance = parseFloat( document.getElementById('distance').value );
-
-			if(distance){
-				//convert M to K 1.609344
-				//convert K to M 0.621371192
-
-				if(convertType == 'miles'){
-					var converted = (distance * 1.609344).toFixed(3);
-					answerDiv.innerHTML = `${distance} miles converts to ${converted} kilometers`;
-
-				}else{
-					var converted = (distance * 0.621371192).toFixed(3);
-					answerDiv.innerHTML = `${distance} kilometers converts to ${converted} miles`;
-
-				}
-
-			} else {
-				answerDiv.innerHTML = '<h2>Please provide a number</h2>';
-			}
-
-		});
-
-
-	</script>
 </body>
+
 </html>
