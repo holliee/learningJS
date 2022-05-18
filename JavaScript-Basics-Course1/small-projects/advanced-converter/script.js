@@ -1,5 +1,6 @@
 (function () {
 
+    //written by Hollie O'Brien
     "use strict";
 
     let convertType = 'miles';
