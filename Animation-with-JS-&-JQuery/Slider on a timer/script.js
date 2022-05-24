@@ -11,7 +11,9 @@ $(window).on('load', function () {
 
     $("#slider ul").css('width', totalWidth);
 
-    setInterval(function () {
+    let mySlider = setInterval(slider, 3000);
+
+    function slider() {
         counter++;
         if (counter === imageCount) {
             //handle cloning of <ul>
@@ -31,7 +33,14 @@ $(window).on('load', function () {
             leftPosition = `-${counter * imageWidth}px`;
             $('#slider ul').animate({ left: leftPosition }, 700, "easeInQuad");
         }
+    }
 
-    }, 3000);
+    document.getElementById('slider').addEventListener('mouseover', function () {
+        clearInterval(mySlider);
+    });
+
+    document.getElementById('slider').addEventListener('mouseout', function () {
+        mySlider = setInterval(slider, 3000);
+    });
 
 });
