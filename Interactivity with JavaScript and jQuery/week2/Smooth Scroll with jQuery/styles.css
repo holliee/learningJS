@@ -1,13 +1,13 @@
 body {
 	font-family: Arial;
 	color: #333;
-	/*padding-top: 200px;*/
+	padding-top: 200px;
 }
 
 header {
 	background:rgba(217,217,217,0.9);
 	width: 100%;
-	/*position: fixed;*/
+	position: fixed;
 	top: 0;
 	height: 160px;
 }
