@@ -73,6 +73,12 @@ footer p {
 	main { display: flex; }
 
 	.column { flex: 1; }
+
+	.cta {
+		width: 20vw;
+		height: 20vw;
+		font-size: 3vw;
+	}
 	
 }
 
@@ -84,6 +90,12 @@ footer p {
 	}
 
 	header h1 {font-size: 120px;}
+
+	.cta {
+		width: 150px;
+		height: 150px;
+		font-size: 24px;
+	}
 }
 
 /*****************Flexslider Rules*********/
@@ -96,3 +108,48 @@ footer p {
 .flex-control-paging li a.flex-active {
 	background: #B40205;
 }
+
+.slide1 { background: url(slides/kitten01.jpg) top left no-repeat; }
+.slide2 { background: url(slides/kitten02.jpg) top left no-repeat; }
+.slide3 { background: url(slides/kitten06.jpg) top left no-repeat; }
+.slide4 { background: url(slides/kitten04.jpg) top left no-repeat; }
+.slide5 { background: url(slides/kitten05.jpg) top left no-repeat; }
+
+.slides li div {
+	width: 100%;
+	height: 0;
+	position: relative;
+	padding-bottom: 50%;
+	background-size: cover;
+}
+
+.slides li div h2 {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	color: #B40205;
+}
+
+.cta {
+	display: flex;
+	align-items: center;
+	height: 25vw;
+	width: 25vw;
+
+	position: absolute;
+	right: 20px;
+	bottom: 100%;
+
+	background: rgba(123, 157, 179, .3);
+	border-radius: 50%;
+	border: 5px solid #084D64;
+
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+	font-family: 'Oswald', sans-serif;
+	font-size: 4vw;
+	color: #03425B;
+}
+
+.light { color: #ededed;}
