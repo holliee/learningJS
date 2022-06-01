@@ -171,9 +171,29 @@ header nav ul li a {
     background-image: url("images/slider/slider01-small.jpg");
 }
 
+.slide2 {
+    background-image: url("images/slider/slider02-small.jpg");
+}
+
+.slide3 {
+    background-image: url("images/slider/slider03-small.jpg");
+}
+
+.slide4 {
+    background-image: url("images/slider/slider04-small.jpg");
+}
+
+.slide5 {
+    background-image: url("images/slider/slider05-small.jpg");
+}
+
+.slide6 {
+    background-image: url("images/slider/slider06-small.jpg");
+}
+
 #slider .cta {
     position: absolute;
-    bottom: 0;
+    bottom: -223px;
     right: 0;
     background: rgba(6, 25, 35, 0.5);
     padding: 10px;
@@ -184,6 +204,20 @@ header nav ul li a {
 #slider .cta h2 {
     font-size: 20px;
     color: #fff;
+}
+
+.flexslider {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.flex-control-paging li a {
+    border-radius: 0;
+}
+
+.flex-control-paging li a.flex-active {
+    background: var(--firey-rose);
 }
 
 /************ Overview Styles *************/
@@ -369,6 +403,14 @@ header nav ul li a {
     color: #fff;
 }
 
+#rotator {
+    min-height: 350px;
+}
+
+#rotator blockquote {
+    display: none;
+}
+
 #listen blockquote {
     font-size: 28px;
     line-height: 1.3em;
@@ -469,6 +511,27 @@ footer article a {
 
     .slide1 {
         background-image: url("images/slider/slider01-medium.jpg");
+    }
+
+
+    .slide2 {
+        background-image: url(images/slider/slider02-medium.jpg);
+    }
+
+    .slide3 {
+        background-image: url(images/slider/slider03-medium.jpg);
+    }
+
+    .slide4 {
+        background-image: url(images/slider/slider04-medium.jpg);
+    }
+
+    .slide5 {
+        background-image: url(images/slider/slider05-medium.jpg);
+    }
+
+    .slide6 {
+        background-image: url(images/slider/slider06-medium.jpg);
     }
 
     #overview {
@@ -676,6 +739,10 @@ footer article a {
         font-size: 36px;
     }
 
+    #rotator {
+        min-height: 550px;
+    }
+
     /* Our Team styles */
     #ourteam {
         display: flex;
@@ -743,6 +810,27 @@ footer article a {
 
     .slide1 {
         background-image: url("images/slider/slider01-large.jpg");
+    }
+
+
+    .slide2 {
+        background-image: url(images/slider/slider02-large.jpg);
+    }
+
+    .slide3 {
+        background-image: url(images/slider/slider03-large.jpg);
+    }
+
+    .slide4 {
+        background-image: url(images/slider/slider04-large.jpg);
+    }
+
+    .slide5 {
+        background-image: url(images/slider/slider05-large.jpg);
+    }
+
+    .slide6 {
+        background-image: url(images/slider/slider06-large.jpg);
     }
 
     /* Overview styles */
