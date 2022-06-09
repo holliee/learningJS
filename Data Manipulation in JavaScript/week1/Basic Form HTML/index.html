@@ -11,8 +11,24 @@
 <body>
     <h1>Form Basics</h1>
     <form method="post" action="processor.php">
-        
+        <!--'for' in the label has to match up with the id in the input -->
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Hollie" value="Katie">
+
+        <label for="favcolor">Favorite Color</label>
+        <input type="color" name="favcolor" id="favcolor" value=#76d690>
+
+        <input type="radio" name="spam" id="spam-yes" value="yes">
+        <label for="spam-yes">Yes, send me spam</label>
+        <input type="radio" name="spam" id="spam-no" value="no" checked>
+        <label for="spam-no">No, don't send me spam</label>
+
     </form>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
 </body>
 
 </html>
